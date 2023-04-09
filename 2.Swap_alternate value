@@ -1,0 +1,36 @@
+// swap alternate
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc= new Scanner(System.in);
+	    System.out.println("enter size of the array must be even");
+	    // n must be even here 
+	    
+	    int n=sc.nextInt();
+	 
+		int arr[]= new int[n];
+		System.out.println("Enter array elements");
+		for(int i=0;i<n;i++)
+		{
+		    arr[i]=sc.nextInt();
+		    
+		}
+			System.out.println("sum of array is");
+
+			for(int i=0;i<n;i+=2)
+			{
+			       int j=i+1;
+			       int t=arr[j];
+			       arr[j]=arr[i];
+			       arr[i]=t;
+			   }
+			for(int k=0;k<n;k++)
+		{
+		   System.out.println(arr[k]);
+		    
+		}	
+		
+	}
+}
