@@ -1,0 +1,42 @@
+import java.util.*;
+
+public class Main
+{    public static void secondlargest(int arr[])
+     {
+         int max=arr[0];
+         int secondmax=Integer.MIN_VALUE;
+        for(int i=0;i<arr.length;i++)
+        {
+            if(arr[i]>max)
+            {
+            secondmax=max;
+              max=arr[i];
+           
+           
+            }
+            else if(secondmax < arr[i] && arr[i]!= max)
+            {
+                secondmax=arr[i];
+            }
+        }
+     
+        System.out.println("second largest element is: "+secondmax);
+         
+     }
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	   
+	   System.out.println("enter size of array");
+	    int n = sc.nextInt();
+		int arr[]=new int[n];
+		System.out.println("enter array elements");
+	
+		for(int i=0;i<n;i++)
+		{
+		    arr[i]=sc.nextInt();
+		}
+    
+	    secondlargest(arr);
+	}
+}
+
